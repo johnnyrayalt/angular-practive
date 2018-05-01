@@ -1,0 +1,12 @@
+.recipeList {
+  width: auto;
+  margin:auto;
+  padding: 10px 20%;
+}
+
+.recipe-card {
+  background-color: #f0e080;
+  padding: 2%;
+  margin: 2%;
+  border-radius: 5px;
+}
