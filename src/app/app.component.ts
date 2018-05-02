@@ -13,13 +13,13 @@ export class AppComponent {
     new Recipe(RECIPES[1].name, RECIPES[1].description, RECIPES[1].ingredients, RECIPES[1].instructions),
     new Recipe(RECIPES[2].name, RECIPES[2].description, RECIPES[2].ingredients, RECIPES[2].instructions)
   ];
-
   selectRecipe = null;
-  hideRecipe() {
-    this.selectRecipe = null;
+
+  displayRecipe(recipe) {
+    this.selectRecipe = recipe;
   }
-  currentRecipe = this.recipes;
-  showRecipe() {
-    this.selectRecipe = this.currentRecipe;
+
+  hideRecipe(recipe) {
+    this.selectRecipe = null;
   }
 }

@@ -7,20 +7,20 @@
       {{recipe.name}}
     </h2>
     <h3>{{recipe.description}}</h3>
-    <div *ngFor="let currentRecipe of recipe">
-      <div class="show-hide-content" *ngIf="selectRecipe">
+    <div>
+      <button (click)="displayRecipe(recipe)" type="button" name="button">show</button>
+      <button (click)="hideRecipe(recipe)" type="button" name="button">hide</button>
+      <div class="show-hide-content" *ngIf="selectRecipe === recipe">
         <p>Ingredients</p>
         <ul>
-          <li *ngFor="let ingredient of recipe.ingredients.toString().split('.')">{{ingredient}}</li>
+          <li *ngFor="let ingredient of selectRecipe.ingredients.toString().split('.')">{{ingredient}}</li>
         </ul>
         <p>Instructions</p>
         <ul>
-          <li *ngFor="let instructions of recipe.instructions.toString().split('.')">{{instructions}}</li>
+          <li *ngFor="let instructions of selectRecipe.instructions.toString().split('.')">{{instructions}}</li>
         </ul>
       </div>
     </div>
 
-    <button (click)="showRecipe(currentRecipe)">show</button>
-    <button (click)="hideRecipe(currentRecipe)">hide</button>
   </div>
 </div>
